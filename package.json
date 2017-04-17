@@ -1,0 +1,19 @@
+{
+  "name": "indirect-reference",
+  "version": "0.0.1",
+  "description": "Indirect reference mapping to prevent insecure direct object mapping",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "owasp",
+    "idor",
+    "mapping"
+  ],
+  "author": "ulisses.montenegro@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
