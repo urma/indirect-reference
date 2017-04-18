@@ -1,5 +1,13 @@
 const crypto = require('crypto');
 
+/* Class constants */
+AccessReferenceMap.prototype.DEFAULT_ENCODING = 'hex';
+AccessReferenceMap.prototype.DEFAULT_WIDTH = 16;
+AccessReferenceMap.prototype.DEFAULT_OPTIONS = {
+  encoding: AccessReferenceMap.prototype.DEFAULT_ENCODING,
+  width: AccessReferenceMap.prototype.DEFAULT_WIDTH,
+};
+
 function AccessReferenceMap(options) {
   const actualOptions = Object.assign(this.DEFAULT_OPTIONS, options);
   this.encoding = actualOptions.encoding;
@@ -7,13 +15,6 @@ function AccessReferenceMap(options) {
   this.dtoi = new Map();
   this.itod = new Map();
 }
-
-AccessReferenceMap.prototype.DEFAULT_ENCODING = 'hex';
-AccessReferenceMap.prototype.DEFAULT_WIDTH = 16;
-AccessReferenceMap.prototype.DEFAULT_OPTIONS = {
-  encoding: AccessReferenceMap.prototype.DEFAULT_ENCODING,
-  width: AccessReferenceMap.prototype.DEFAULT_WIDTH,
-};
 
 AccessReferenceMap.prototype.getUniqueReference = function() {
   return crypto.randomBytes(this.width).toString(this.encoding);
