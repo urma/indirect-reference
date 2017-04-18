@@ -23,6 +23,18 @@ var indirectReference = accessMap.addDirectReference(object.id);
 /* Fetch original object from mapping */
 var directReference = accessMap.getDirectReference(indirectReference);
 var originalObject = db.fetchObject({ id: directReference });
+
+/* Map a collection of objects */
+var objectCollection = db.fetchCollection({ userId: 1234 });
+accessMap.update(objectCollection.map((obj) => {
+  obj.id
+}));
+
+/* Iterate over registred objects */
+for(let directReference of accessMap.iterator()) {
+  var indirectReference = accessMap.getIndirectReference(directReference)
+  console.log(`${directReference} is mapped to ${indirectReference}`);
+}
 ```
 ## Methods
 ### constructor(options)
