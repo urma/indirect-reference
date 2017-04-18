@@ -4,16 +4,19 @@
   "description": "Indirect reference mapping to prevent insecure direct object mapping",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha"
   },
   "keywords": [
     "owasp",
     "idor",
-    "mapping"
+    "mapping",
+    "insecure direct object mapping"
   ],
   "author": "ulisses.montenegro@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^3.19.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0"
   }
