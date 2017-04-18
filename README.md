@@ -8,11 +8,11 @@ This prevents attackers from guessing identifier values and getting access to
 objects outside their scope.
 
 Install with:
-```
+```shell
 npm install indirect-reference
 ```
 ## Usage Example
-```
+```javascript
 var AccessReferenceMap = require('indirect-reference');
 var accessMap = new AccessReferenceMap({ width: 32 });
 
