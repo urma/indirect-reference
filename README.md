@@ -1,4 +1,7 @@
 # indirect-reference
+
+![travis status](https://travis-ci.org/urma/indirect-reference.svg?branch=master)
+
 This is a node.js port of
 [OWASP ESAPI AccessReferenceMap](https://static.javadoc.io/org.owasp.esapi/esapi/2.0.1/org/owasp/esapi/AccessReferenceMap.html)
 class, which implements indirect mapping between object IDs (which can represent
